@@ -1,0 +1,182 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  position: fixed;
+  margin: 1em 2em;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica;
+  color: #000000;
+  font-size: 36px;
+  z-index: 1;
+  width: 8%;
+}
+
+.logo1 {
+  position: fixed;
+  margin: 1em 2em;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica;
+  color: #000000;
+  font-size: 36px;
+  z-index: 1;
+  width: 8%;
+}
+
+.title {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica;
+  color: #000000;
+  font-size: 68px;
+  z-index: 1;
+}
+
+.openup {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+button {
+  background: none;
+  padding: 20px 48px;
+  color: #000000;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.bikes {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1;
+  opacity: 0;
+}
+
+#wrap {
+  position: absolute;
+  left: 0%;
+  top: -8%;
+  width: 150%;
+  height: 100%;
+  display: flex;
+  margin: 0 25%;
+}
+
+.block {
+  position: relative;
+  width: 25%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  transform: scale(0.97);
+}
+
+.product {
+  position: relative;
+  display: block;
+  max-width: 90%;
+}
+
+.product img {
+  position: relative;
+  display: block;
+  width: 84%;
+  height: auto;
+  z-index: 2;
+}
+
+.txt {
+  position: absolute;
+  top: 104%;
+  left: 2%;
+  width: 80%;
+  opacity: 0;
+  text-align: center;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  z-index: 1;
+  transform: scaleY(1) translateY(-30px);
+  transition: transform .2s, opacity .5s;
+}
+
+.txt p {
+  margin-bottom: 20px;
+}
+
+.bikes button {
+  margin-top: 10px;
+  padding: 16px 28px;
+}
+
+h1 {
+  font-family: Helvetica;
+  color: #000000;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+.block:hover .txt {
+  opacity: 1;
+  transform: scaleY(1) translateY(0);
+}
+
+.close-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2.5em;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  font-family: Helvetica;
+  color: #000000;
+  transition: 0.3s;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000000;
+  transition: 0.3s;
+}
+
+@media(max-width: 768px) {
+  .title {
+        font-size: 42px;
+  }
+
+  .tagline {
+        font-size: 15px;
+  }
+
+  .outline {
+        width: 92%;
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yamaha</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+<body>
+      <div class="container">
+            <img class="logo" src="images/logo.jpg"><img>
+            <div class="title">
+                  Supersport Collection
+            </div>
+            <div class="openup">
+                  <button>See Collection</button>
+            </div>
+      </div>
+      <div class="bikes">
+        <img class="logo1" src="images/logo.jpg"><img>
+            <div id="wrap">
+                  <a href="#" class="block">
+                        <div class="product one">
+                              <img src="images/R1M.jpg" alt="">
+                              <div class="txt">
+                                    <h1>R1M</h1>
+                                    <div class="add">
+                                        <button>See More</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </a>
+                  <a href="#" class="block">
+                        <div class="product two">
+                              <img src="images/R1BLACK.jpg" alt="">
+                              <div class="txt">
+                                    <h1>R1</h1>
+                                    <div class="add">
+                                        <button>See More</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </a>
+                  <a href="#" class="block">
+                        <div class="product three">
+                              <img src="images/R6BLACK.jpg" alt="">
+                              <div class="txt">
+                                    <h1>R6</h1>
+                                    <div class="add">
+                                          <button>See More</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </a>
+                  <a href="#" class="block">
+                        <div class="product four">
+                              <img src="images/R3BLACK.jpg" alt="">
+                              <div class="txt">
+                                    <h1>R3</h1>
+                                    <div class="add">
+                                        <button>See More</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </a>
+                  <a href="#" class="block">
+                    <div class="product five">
+                          <img src="images/R125BLACK.jpg" alt="">
+                          <div class="txt">
+                                <h1>R125</h1>
+                                <div class="add">
+                                    <button>See More</button>
+                                </div>
+                          </div>
+                    </div>
+              </a>
+              <a href="#" class="block">
+                <div class="product six">
+                      <img src="images/R125MONSTER.jpg" alt="">
+                      <div class="txt">
+                            <h1>R125 MONSTER</h1>
+                            <div class="add">
+                                <button>See More</button>
+                            </div>
+                      </div>
+                </div>
+          </a>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+
+      $(document).ready(function() {
+            var docWidth = $('body').width(),
+            $wrap = $('#wrap'),
+            $images = $('#wrap .block'),
+            slidesWidth = $wrap.width();
+
+            $(window).on('resize', function() {
+                  docWidth = $('body').width();
+                  slidesWidth = $wrap.width();
+            })
+
+            $(document).mousemove(function(e) {
+                  var mouseX = e.pageX,
+                  offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+
+                  $images.css({
+                        '-wrbkit-transform' : 'translate3d(' + -offset + 'px,0,0)',
+                        'transform' : 'translate3d(' + -offset + 'px,0,0)'
+                  });
+            });
+      })
+
+      var t1 = new TimelineMax({paused: true});
+
+      TweenMax.from(".logo", 0.5, {
+            opacity: 0,
+            y: 10,
+            delay: 1
+      });
+
+      TweenMax.from(".menu", 0.5, {
+            opacity: 0,
+            y: 10,
+            delay: 1.2
+      });
+
+      TweenMax.from(".title", 3, {
+            opacity: 0,
+            delay: 1.4
+      });
+
+      TweenMax.from(".openup", 3, {
+            opacity: 0,
+            delay: 1.6
+      });
+
+      t1.to(".bikes", 1, {
+            autoAlpha: 1
+      });
+
+      t1.from(".one", 0.5, {
+            opacity: 0,
+            y: 20,
+            delay: 0.1
+      },"-=1");
+
+      t1.from(".two", 0.5, {
+            opacity: 0,
+            y: 20,
+            delay: 0.3
+      },"-=1");
+
+      t1.from(".three", 0.5, {
+            opacity: 0,
+            y: 20,
+            delay: 0.5
+      },"-=1");
+
+      t1.from(".four", 0.5, {
+            opacity: 0,
+            y: 20,
+            delay: 0.7
+      },"-=1");
+
+      t1.from(".five", 0.5, {
+            opacity: 0,
+            y: 20,
+            delay: 0.7
+      },"-=1");
+
+      t1.from(".six", 0.5, {
+            opacity: 0,
+            y: 20,
+            delay: 0.7
+      },"-=1");
+
+      t1.reverse();
+      $(document).on("click", ".openup", function() {
+            t1.reversed(!t1.reversed());
+      });
+
+      $(document).on("click", "a", function() {
+            t1.reversed(!t1.reversed());
+      });
+
+      $(document).on("click", ".close-btn a", function() {
+            t1.reversed(!t1.reversed());
+      });
+
+      </script>
+</body>
+</html>
