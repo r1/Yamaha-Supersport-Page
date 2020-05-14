@@ -82,21 +82,6 @@ button:hover {
   z-index: 2;
   transform: scale(0.97);
 }
-
-.product {
-  position: relative;
-  display: block;
-  max-width: 90%;
-}
-
-.product img {
-  position: relative;
-  display: block;
-  width: 84%;
-  height: auto;
-  z-index: 2;
-}
-
 .txt {
   position: absolute;
   top: 104%;
