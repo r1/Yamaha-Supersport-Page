@@ -6,22 +6,10 @@ html, body {
   overflow: hidden;
 }
 
-.logo {
-  position: fixed;
-  margin: 1em 2em;
-  transform: translate(-50%, -50%);
-  font-family: Helvetica;
-  color: #000000;
-  font-size: 36px;
-  z-index: 1;
-  width: 8%;
-}
-
 .logo1 {
   position: fixed;
   margin: 1em 2em;
   transform: translate(-50%, -50%);
-  font-family: Helvetica;
   color: #000000;
   font-size: 36px;
   z-index: 1;
