@@ -8,7 +8,7 @@ html, body {
 
 .logo1 {
   position: fixed;
-  margin: 1em 2em;
+  margin: 2em 2em;
   transform: translate(-50%, -50%);
   color: #000000;
   font-size: 36px;
@@ -42,6 +42,20 @@ button {
   border: 1px solid #000000;
   text-transform: uppercase;
   letter-spacing: 4px;
+}
+
+.product {
+  position: relative;
+  display: block;
+  max-width: 90%;
+}
+
+.product img {
+  position: relative;
+  display: block;
+  width: 84%;
+  height: auto;
+  z-index: 2;
 }
 
 button:focus {
